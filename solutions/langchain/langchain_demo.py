@@ -17,7 +17,8 @@ You answer the question in a short and concise way. Take this context into accou
 prompt = PromptTemplate(template=prompt_template, input_variables=["instruction"])
 memory = ConversationBufferMemory(memory_key="context")
 
-chain = LLMChain(llm=llm, prompt=prompt, verbose=True, memory=memory)
+# chain = LLMChain(llm=llm, prompt=prompt, verbose=True, memory=memory)
+chain = LLMChain(llm=llm, prompt=prompt, memory=memory)
 
 print(chain.invoke({"instruction": "Which city is the capital of India?"}))
 print(

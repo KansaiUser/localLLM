@@ -17,5 +17,11 @@ llm = AutoModelForCausalLM.from_pretrained(
 # print()
 
 # Good prompts are very specific
-prompt = "What is the name of the capital city of India, she asked. Please only respond with the city name and then stop talking. He answered: "
+# prompt = "What is the name of the capital city of India, she asked. Please only respond with the city name and then stop talking. He answered: "
+# print(prompt + llm(prompt))
+
+# prompt ="What is the capital city of India, in one or two words?"
+# print(prompt + llm(prompt))
+
+prompt ="What is the capital city of India? Just say the name and stop"
 print(prompt + llm(prompt))

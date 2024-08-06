@@ -26,7 +26,7 @@ for word in llm(prompt, stream=True):
 print()
 history.append(answer)
 
-question = "And of the United States?"
+question = "And which is of the United States?"
 prompt = get_prompt(question, history)
 for word in llm(prompt, stream=True):
     print(word, end="", flush=True)
